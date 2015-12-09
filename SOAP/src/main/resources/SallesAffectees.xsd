@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://iaws/projetWS/sallesAffectees" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="SallesAffectees">
+  
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="salle">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:byte" name="id"/>
+                <xs:attribute type="xs:string" name="nom"/>
+                <xs:attribute type="xs:string" name="ville"/>
+                <xs:attribute type="xs:byte" name="nbPlaces"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="idFilm"/>
+    </xs:complexType>
+  </xs:element>
+  
+    <xs:element name="SallesAffecteesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="idFilm"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

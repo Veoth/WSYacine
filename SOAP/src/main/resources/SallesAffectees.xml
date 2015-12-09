@@ -1,0 +1,4 @@
+<SallesAffectees xmlns="http://iaws/projetWS/sallesAffectees" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://iaws/projetWS/sallesAffectees SallesAffectees.xsd" idFilm="tt1201607">
+	<salle id="1" nom="test" ville="maVille" nbPlaces="5"/>
+</SallesAffectees>

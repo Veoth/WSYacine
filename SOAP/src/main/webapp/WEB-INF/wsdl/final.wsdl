@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://iaws/projetWS/sallesAffectees" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://iaws/projetWS/sallesAffectees" targetNamespace="http://iaws/projetWS/sallesAffectees">
+  <wsdl:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://iaws/projetWS/sallesAffectees">
+  <xs:element name="SallesAffectees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="salle">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="id" type="xs:byte"/>
+                <xs:attribute name="nom" type="xs:string"/>
+                <xs:attribute name="ville" type="xs:string"/>
+                <xs:attribute name="nbPlaces" type="xs:byte"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="idFilm" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:portType name="SallesAffectees">
+  </wsdl:portType>
+  <wsdl:binding name="SallesAffecteesSoap11" type="tns:SallesAffectees">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  </wsdl:binding>
+  <wsdl:service name="SallesAffecteesService">
+    <wsdl:port binding="tns:SallesAffecteesSoap11" name="SallesAffecteesSoap11">
+      <soap:address location="http://localhost:8080/IAWS-HodeTzorLpie-ProjetWS/projetWS/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

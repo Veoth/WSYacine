@@ -1,0 +1,3 @@
+<SallesAffecteesRequest xmlns="http://iaws/projetWS/sallesAffectees" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://iaws/projetWS/sallesAffectees SallesAffectees.xsd">
+    <idFilm>tt1201607</idFilm>
+</SallesAffecteesRequest>
